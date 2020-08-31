@@ -475,7 +475,8 @@ const PermitStepper: React.FC<SteperState> = () => {
 
     const switchApplicationForm = (appStep: any) =>{
         const step = appStep;
-        if(step !== NaN){
+        const err = isNaN(step);
+        if(err === false){
             switch (step) {
                 case 0:
                     return <App1

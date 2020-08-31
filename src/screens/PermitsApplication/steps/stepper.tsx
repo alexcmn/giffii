@@ -29,7 +29,7 @@ const Stepper: React.FC<StepperNavigationProps> = ({steps, currentStep}) => {
         const current:any = updateStep(currentStep-1, newSteps);
         setStepss(current)
         
-    }, [currentStep])
+    }, [currentStep, steps])
 
     const updateStep = (stepNumb:any, steps:any) =>{
         const newSteps = [...steps];
