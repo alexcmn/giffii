@@ -1,0 +1,312 @@
+.dashboard{
+    position: relative;
+    top: 125px;
+    width: calc(100vw - 400px);
+    height: calc(100vh - 125px);
+    float: right;
+    transition: 0.3s ease-in-out;
+    padding: 2rem;
+    background-color: #F7F7F7;
+}
+
+.dashboard.open{
+    width: calc(100vw - 100px);
+}
+
+.dashboard .top{
+    position: relative;
+}
+
+.dashboard .top .wrapp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #4EBEC6;
+    height: 80px;
+    transition: 0.3s ease-in-out;
+}
+
+.dashboard .top .wrapp h1{
+    color: #12777F;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.dashboard .top .wrapp .search{
+    width: 3rem;
+    height: 3rem;
+    background-color: #21B4BF;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px #00000029;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dashboard .top .wrapp .search svg{
+    width: 25px;
+    height: 25px;
+}
+
+.dashboard .top .wrapp .search svg path{
+    fill: #fff;
+}
+
+.dashboard .top .search-input{
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 5px 30px #12777F4D;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.dashboard .top .search-input span{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dashboard .top .search-input .search svg{
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard .top .search-input .search svg path{
+    fill: #7D1A7B;
+}
+
+.dashboard .top .search-input input{
+    width: calc(100% - 6rem);
+    height: 100%;
+    border: none;
+    color: #5E5E5E4A;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 1rem;
+}
+
+.dashboard .top .search-input input::placeholder{
+    color: #5E5E5E4A;
+}
+
+.dashboard .top .search-input span.close{
+    color: #7D1A7B;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dashboard .links{
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100vw - 400px - 4rem);
+}
+
+.dashboard .table{
+    width: calc(100vw - 400px - 4rem);
+    margin-top: 9rem;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.dashboard.open .table{
+    width: calc(100vw - 100px - 4rem);
+}
+
+.dashboard .table table{
+    height: 300px;
+    width: 100%;
+    box-shadow: 0px 5px 30px #BBF7FC41;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.dashboard .table table tr:first-child{
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.dashboard .table table th{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 10px !important;
+}
+
+.dashboard .table table td{
+    padding: 2rem 15px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #707070;
+}
+
+.dashboard .table table td:nth-child(6){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard .table table td:nth-child(6) div{
+    margin-right: 5px;
+}
+
+.dashboard .table table td:nth-child(3){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard .table table td:nth-child(3) div{
+    margin-right: 5px;
+}
+
+.dashboard .table table td div{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #611669;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px #00000029;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard .table table td span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard .table table td span img{
+    width: 1rem;
+    margin-right: 5px;
+}
+
+.dashboard .table table td.app div{
+    background-color: #21B4BF;
+}
+
+.dashboard .table table td.pend div{
+    background-color: #FFD270;
+}
+
+.dashboard .table table td.err div{
+    background-color: #E0314C;
+}
+
+.dashboard .table table td div svg{
+    width: 10px;
+    height: 10px;
+}
+
+.dashboard .table table td div svg path{
+    fill: #fff;
+}
+
+.dashboard .new{
+    margin-top: 2rem;
+}
+
+.dashboard .new .wrapp{
+    width: calc(100vw - 400px - 4rem);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #4EBEC6;
+    height: 80px;
+    transition: 0.3s ease-in-out;
+}
+
+.dashboard.open .new .wrapp{
+    width: calc(100vw - 100px - 4rem);
+}
+
+.dashboard .new .wrapp h1{
+    color: #12777F;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.dashboard .new .link{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard .new .link p{
+    color: #5E5E5E;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dashboard .new .link button{
+    width: 9rem;
+    height: 3rem;
+    background-color: #21B4BF;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    border: none;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px){
+    .dashboard{
+        width: calc(100vw - 75vw);
+        padding: 1rem;
+        height: calc(100vh - 125px);
+        overflow-y: scroll;
+    }
+    .dashboard.open{
+        width: calc(100vw - 60px);
+    }
+    .dashboard .links{
+        flex-direction: column;
+        left: unset;
+        transform: unset;
+        position: unset;
+        top: unset;
+        margin-top: 6rem;
+        width: unset;
+    }
+    .dashboard .new .link{
+        flex-direction: column;
+    }
+    .dashboard .new .link button{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}

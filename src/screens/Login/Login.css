@@ -1,0 +1,169 @@
+.login-wrapp {
+    position: relative;
+    top: 125px;
+    height: calc(100vh - 125px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-wrapp .left {
+    height: 100%;
+    width: 50%;
+    background: #F7F7F7;
+    padding-top: 5rem;
+}
+.login-wrapp .left .container .row .login-box {
+    padding: 0 6rem;
+}
+.login-wrapp .left .container .row .login-box h2 {
+    color: #21b4bf;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.login-wrapp .left .container .row .login-box form {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #21b4bf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-wrapp .left .container .row .login-box form .error_label {
+    color: red;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.login-wrapp .left .container .row .login-box form .form-group {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.login-wrapp .left .container .row .login-box form .form-group input {
+    height: 60px;
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    border: none;
+    color: #83767693;
+    padding-left: 2rem;
+    font-size: 20px;
+}
+.login-wrapp .left .container .row .login-box form .form-group input.input-error {
+    border: 2px solid red !important;
+}
+.login-wrapp .left .container .row .login-box form .form-group input::placeholder {
+    color: #83767693;
+}
+.login-wrapp .left .container .row .login-box form .form-group .error_label {
+    color: red;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.login-wrapp .left .container .row .login-box form .form-row {
+    width: 100%;
+}
+.login-wrapp .left .container .row .login-box form .form-row button {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #21b4bf;
+    border-radius: 15px;
+    background-color: #21b4bf;
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+}
+.login-wrapp .left .container .row .login-box form .form-row button:hover {
+    background-color: #fff;
+    color: #21b4bf;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign .wrapp {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #21b4bf;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign .wrapp input[type="checkbox"] {
+    appearance: none;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign .wrapp input[type="checkbox"]:checked + label .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #21b4bf;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign .wrapp input[type="checkbox"]:checked + label .overlay svg path {
+    fill: #fff;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign .wrapp label {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 0;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign .wrapp label .overlay {
+    opacity: 0;
+}
+.login-wrapp .left .container .row .login-box form .stay-sign p {
+    margin-bottom: 0;
+    color: #98BCBF;
+    font-size: 22px;
+    font-weight: 600;
+}
+.login-wrapp .left .container .row .login-box form .forgot {
+    color: #b186b0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 22px;
+}
+.login-wrapp .right {
+    height: 100%;
+    width: 50%;
+    background: url('../../assets/images/banner/login.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 992px){
+    .login-wrapp .right{
+        display: none;
+    }
+    .login-wrapp .left{
+        width: 100%;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-wrapp .left .container .row .login-box{
+        padding: 0 1rem;
+        width: 100%;
+    }
+    .login-wrapp .left .container .row .login-box form .stay-sign{
+        width: 100%;
+    }
+
+    .login-wrapp .left .container .row .login-box form{
+        padding-bottom: 1rem;
+    }
+}
