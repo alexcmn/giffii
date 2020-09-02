@@ -6,154 +6,6 @@
     padding: 5rem 0;
 }
 
-.permits-application-wrapper .help-desk-btn{
-    position: fixed;
-    bottom: 25px;
-    right: 55px;
-    width: 60px;
-    height: 60px;
-    background-color: #611669;
-    border-radius: 50%;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 999;
-}
-
-.permits-application-wrapper .help-desk-btn span{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-    transform: rotate(45deg);
-}
-
-.permits-application-wrapper .help-desk-btn span img{
-    width: 50%;
-}
-
-.permits-application-wrapper .help-desk-btn .help{
-    position: absolute;
-    bottom: 60px;
-    right: 60px;
-    background: #fff;
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-}
-
-.permits-application-wrapper .help-desk-btn .help .top{
-    width: 100%;
-    height: 80px;
-    background-color: #B186B0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    padding: 0 2rem;
-}
-
-.permits-application-wrapper .help-desk-btn .help .top .left{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.permits-application-wrapper .help-desk-btn .help .top .left img{
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-.permits-application-wrapper .help-desk-btn .help .top .left .name h2{
-    font-size: 24px;
-    color: #fff;
-    font-weight: 600;
-}
-
-.permits-application-wrapper .help-desk-btn .help .top .left .name p{
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.permits-application-wrapper .help-desk-btn .help .icon{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: #7D1A7B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.permits-application-wrapper .help-desk-btn .help .icon svg{
-    width: 1rem;
-    height: 1rem;
-}
-
-.permits-application-wrapper .help-desk-btn .help .icon svg g{
-    width: 100%;
-    height: 100%;
-}
-
-.permits-application-wrapper .help-desk-btn .help .icon svg path{
-    fill: #fff;
-    width: 10px;
-    height: 10px;
-}
-
-.permits-application-wrapper .help-desk-btn.active .help{
-    opacity: 1;
-    visibility: visible;
-}
-
-.permits-application-wrapper .help-desk-btn.active span{
-    transform: rotate(360deg);
-}
-
-.permits-application-wrapper .help-desk-btn .middle{
-    width: 100%;
-    height: calc(100% - 80px - 60px);
-}
-
-.permits-application-wrapper .help-desk-btn .bottom{
-    width: 100%;
-    height: 60px;
-    background-color: #98BCBF33;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.permits-application-wrapper .help-desk-btn .bottom input{
-    width: calc(100% - 5rem);
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    color: #5E5E5E;
-    padding-left: 1rem;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.permits-application-wrapper .help-desk-btn .bottom .right{
-    height: 100%;
-    width: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 .permits-application-wrapper .stepper{
     display: flex;
     justify-content: space-between;
@@ -165,8 +17,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 23%;
+    width: 50%;
     position: relative;
+}
+
+.permits-application-wrapper .stepper .stepper-wrapp:last-child{
+    display: none;
+}
+
+.permits-application-wrapper .stepper .stepper-wrapp:nth-child(3) .line{
+    display: none;
 }
 
 .permits-application-wrapper .stepper .stepper-wrapp .numb{
@@ -238,9 +98,9 @@
     height: 3px;
     background-color: #837676;
     position: absolute;
-    width: 100%;
+    width: 70%;
     top: 70%;
-    left: 80%;
+    left: 65%;
 }
 
 .permits-application-wrapper .stepper .stepper-wrapp .line.completed{
@@ -250,7 +110,7 @@
 .permits-application-wrapper .main .step-1 label{
     color: #21B4BF;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -328,7 +188,7 @@
 .permits-application-wrapper .main .step-2 h2{
     color: #21B4BF;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -399,7 +259,7 @@
     bottom: 1rem;
     transform: translateX(-50%);
     color: #7d1a7b;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1rem;
     width: 100%;
     text-align: center;
@@ -448,7 +308,7 @@
 .permits-application-wrapper .main .step-3 .box h3{
     color: #21B4BF;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -804,6 +664,191 @@
     margin-top: 2rem;
 }
 
+.permits-application-wrapper .main .step-3 .box-4{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.permits-application-wrapper .main .step-3 .box-4 .left,
+.permits-application-wrapper .main .step-3 .box-4 .right{
+    width: 50%;
+}
+
+.permits-application-wrapper .main .step-3 .box-4 .MuiInputBase-root{
+    background-color: #fff;
+    font-family: 'Nunito Sans', sans-serif;
+    box-shadow: 0px 3px 6px #BBF7FC41;
+    border-radius: 5px;
+}
+
+.permits-application-wrapper .main .step-3 .box-4 .MuiInputBase-root::before{
+    border-bottom: none;
+}
+
+.permits-application-wrapper .main .step-3 .box-4 .MuiInput-underline:after{
+    border-bottom: none !important;
+}
+
+.permits-application-wrapper .main .step-3 .box-4 .MuiInputBase-input:focus{
+    outline: 0 !important;
+}
+
+.MuiPopover-paper{
+    box-shadow: 0px 10px 10px #BBF7FC41 !important;
+}
+
+.MuiPickersBasePicker-pickerViewLandscape{
+    padding: 0 2rem !important;
+}
+
+.MuiPopover-paper .MuiPickersBasePicker-pickerViewLandscape>div:first-child{
+    border-bottom: 1px solid #12777F;
+    padding-bottom: 10px;
+}
+
+.MuiPickersDay-daySelected{
+    background-color: #7D1A7B4D !important;
+}
+
+.MuiTypography-body1{
+    color: #12777F;
+}
+
+.MuiSvgIcon-root path:first-child{
+    fill: #12777F;
+}
+
+.MuiPickersCalendarHeader-dayLabel{
+    color: #3A3F40 !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+.MuiInputAdornment-positionEnd .MuiIconButton-root svg path:first-child{
+    fill: #7d1a7b;
+}
+/* .permits-application-wrapper .main .step-3 .box-4 .MuiPaper-elevation8{
+    box-shadow: none !important;
+} */
+
+.permits-application-wrapper .main .step-4 h2{
+    color: #21B4BF;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.permits-application-wrapper .main .step-4 .box{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.permits-application-wrapper .main .step-4 .box .left{
+    margin-right: 2rem;
+}
+
+.permits-application-wrapper .main .step-4 .box .left p,
+.permits-application-wrapper .main .step-4 .box .right p{
+    color: #7D1A7B;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.permits-application-wrapper .main .step-4 .box .left .wrapp,
+.permits-application-wrapper .main .step-4 .box .right .wrapp{
+    width: 200px;
+    height: 45px;
+    box-shadow: 0px 3px 6px #BBF7FC41;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.permits-application-wrapper .main .step-4 .box.box-2 .left .wrapp{
+    width: 220px;
+}
+
+.permits-application-wrapper .main .step-4 .box .left .wrapp span,
+.permits-application-wrapper .main .step-4 .box .right .wrapp span{
+    color: #837676;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.permits-application-wrapper .main .step-4 .box h3{
+    color: #5E5E5E;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.permits-application-wrapper .main .step-4 .box .MuiInputBase-root{
+    background-color: #fff;
+    font-family: 'Nunito Sans', sans-serif;
+    box-shadow: 0px 3px 6px #BBF7FC41;
+    height: 45px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.MuiInputBase-input{
+    color: #837676 !important;
+    padding: 6px 10px !important;
+}
+
+.permits-application-wrapper .main .step-4 .box .MuiInputBase-root::before{
+    border-bottom: none;
+}
+
+.permits-application-wrapper .main .step-4 .box .MuiInput-underline:after{
+    border-bottom: none !important;
+}
+
+.permits-application-wrapper .main .step-4 .box .MuiInputBase-input:focus{
+    outline: 0 !important;
+}
+
+.permits-application-wrapper .main .step-4 .btns{
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+}
+
+.permits-application-wrapper .main .step-4 .btns .prev{
+    width: 5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: none;
+    color: #B186B0;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+}
+
+.permits-application-wrapper .main .step-4 .btns .next{
+    width: 9rem;
+    height: 2.5rem;
+    background-color: #21B4BF;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #21B4BF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.permits-application-wrapper .main .step-4 .btns .next a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 992px){
     .permits-application-wrapper .stepper .stepper-wrapp .desc{
         font-size: 15px !important;
@@ -833,19 +878,11 @@
         margin-left: 0;
         margin-bottom: 1rem;
     }
-    .permits-application-wrapper .help-desk-btn{
-        right: 25px;
-        width: 50px;
-        height: 50px;
+    .permits-application-wrapper .main .step-4 .box.box-1{
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .permits-application-wrapper .help-desk-btn .help{
-        width: 300px;
-        right: 1rem;
-    }
-    .permits-application-wrapper .help-desk-btn .help .top .left .name h2{
-        font-size: 20px;
-    }
-    .permits-application-wrapper .help-desk-btn .help .top .left .name p{
-        font-size: 16px;
+    .permits-application-wrapper .main .step-4 .box.box-1 .left{
+        margin-bottom: 2rem;
     }
 }

@@ -3,6 +3,8 @@ import Crane from '../../../assets/images/icons/permits/crane.png';
 import Warden from '../../../assets/images/icons/permits/van.png';
 import FormField from '../../../components/utils/form/formFields';
 import { ReactComponent as Tick } from '../../../assets/images/icons/tick.svg';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns'
 
 interface LocalityProps {
     values: any,
@@ -18,11 +20,36 @@ interface LocalityProps {
     checkRoad: boolean,
     checkTraffic: boolean,
     checkRoadTraffic: boolean,
-    checkDocY: boolean
-    toggleDocYCheckbox: any
+    checkDocY: boolean,
+    toggleDocYCheckbox: any,
+    handleStartDateChange: any,
+    handleEndDateChange: any,
+    startDate: any,
+    endDate: any
 }
 
-const Step3: React.FC<LocalityProps> = ({ values, update, prevStep, nextStep, switchApplicationForm, toggleChecbox, checkWarden, toggleRoad, toggleTraffic, toggleRoadTraffic, checkRoad, checkTraffic, checkRoadTraffic, checkDocY, toggleDocYCheckbox }) => {
+const Step3: React.FC<LocalityProps> = ({ values, 
+                                        update, 
+                                        prevStep, 
+                                        nextStep, 
+                                        switchApplicationForm, 
+                                        toggleChecbox, 
+                                        checkWarden, 
+                                        toggleRoad, 
+                                        toggleTraffic, 
+                                        toggleRoadTraffic, 
+                                        checkRoad, 
+                                        checkTraffic, 
+                                        checkRoadTraffic, 
+                                        checkDocY, 
+                                        toggleDocYCheckbox,
+                                        startDate,
+                                        endDate,
+                                        handleStartDateChange,
+                                        handleEndDateChange 
+}) => {
+
+    console.log(startDate.toISOString().replace(' 00:00:00', /T.+/))
 
     return (
         <div className="step-3">
@@ -51,7 +78,38 @@ const Step3: React.FC<LocalityProps> = ({ values, update, prevStep, nextStep, sw
                     />
                 </div>
                 <div className="box box-4">
-
+                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                        <div className="left">
+                            <h3>select start date</h3>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="MM/dd/yyyy"
+                                margin="normal"
+                                value={startDate}
+                                onChange={handleStartDateChange}
+                                minDate={startDate}
+                                KeyboardButtonProps={{
+                                    'aria-label': 'change date',
+                                }}
+                            />
+                        </div>
+                        <div className="right">
+                            <h3>select end date</h3>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="MM/dd/yyyy"
+                                margin="normal"
+                                value={endDate}
+                                minDate={startDate}
+                                onChange={handleEndDateChange}
+                                KeyboardButtonProps={{
+                                    'aria-label': 'change date',
+                                }}
+                            />
+                        </div>
+                    </MuiPickersUtilsProvider>
                 </div>
                 <div className="box box-5">
                     <h3>Application For</h3>
@@ -145,11 +203,11 @@ const Step3: React.FC<LocalityProps> = ({ values, update, prevStep, nextStep, sw
                             </div>
                         </div>
                 }
-                </div>
-                <div className="btns">
-                    <button className="prev" onClick={prevStep}>Back</button>
-                    <button className="next" onClick={nextStep}>Next</button>
-                </div>
+            </div>
+            <div className="btns">
+                <button className="prev" onClick={prevStep}>Back</button>
+                <button className="next" onClick={nextStep}>Next</button>
+            </div>
         </div>
     )
 }

@@ -159,6 +159,10 @@
     padding: 15px 10px !important;
 }
 
+.dashboard .table table th:last-child{
+    text-align: left;
+}
+
 .dashboard .table table td{
     padding: 2rem 15px;
     height: 20px;

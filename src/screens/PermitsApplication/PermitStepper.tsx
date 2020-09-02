@@ -13,8 +13,6 @@ import App2 from './steps/step_3_forms/app2';
 import App3 from './steps/step_3_forms/app3';
 import App4 from './steps/step_3_forms/app4';
 
-import HelpDesk from '../../components/utils/help_desk';
-
 import Trenching from '../../assets/images/icons/permits/trenching.png';
 import Market from '../../assets/images/icons/permits/market.png';
 import BBQ from '../../assets/images/icons/permits/bbq.png';
@@ -68,7 +66,8 @@ interface Validation{
 const steps = [
     "Locality",
     "Permit Type",
-    "Review"
+    "Review",
+    "Confirm"
 ]
 
 const PermitStepper: React.FC<SteperState> = () => {
@@ -384,10 +383,11 @@ const PermitStepper: React.FC<SteperState> = () => {
     const [checkTraffic, setCheckTraffic] = useState(false);
     const [checkRoadTraffic, setCheckRoadTraffic] = useState(false);
     const [checkDocY, setCheckDocY] = useState(false);
-    const [openHelp, setOpenHelp] = useState(false);
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [endDate, setEndDate] = useState<Date | null>(new Date());
 
     const nextStep = () => {
-        if (step <= 2) {
+        if (step <= 3) {
             setStep(step + 1);
         }
     }
@@ -423,9 +423,13 @@ const PermitStepper: React.FC<SteperState> = () => {
         setCheckDocY(!checkDocY)
     }
 
-    const toggleHelpDesk = () =>{
-        setOpenHelp(!openHelp)
-    }
+    const handleStartDateChange = (date: Date | null) => {
+        setStartDate(date);
+    };
+
+    const handleEndDateChange = (date: Date | null) => {
+        setEndDate(date);
+    };
 
     const switchSteps = (step:any) => {
         const appStep = parseInt(formdata.application.value);
@@ -436,7 +440,6 @@ const PermitStepper: React.FC<SteperState> = () => {
                     update={(element: any) => updateForm(element)}
                     nextStep={nextStep}
                 />
-                // break;
             case 2:
                 return <Step2
                     values={type}
@@ -445,7 +448,6 @@ const PermitStepper: React.FC<SteperState> = () => {
                     nextStep={nextStep}
                     prevStep={prevStep}
                 />
-                // break;
             case 3:
                 return <Step3
                     values={formdata}
@@ -462,12 +464,21 @@ const PermitStepper: React.FC<SteperState> = () => {
                     toggleRoadTraffic={toggleRoadTrafficChecbox}
                     checkDocY={checkDocY}
                     toggleDocYCheckbox={toggleDocYCheckbox}
+                    startDate={startDate}
+                    endDate={endDate}
+                    handleStartDateChange={handleStartDateChange}
+                    handleEndDateChange={handleEndDateChange}
                     prevStep={prevStep}
                     nextStep={nextStep}
                 />
             case 4:
                 return <Step4
                     values={formdata}
+                    checkWarden={checkWarden}
+                    startDate={startDate}
+                    endDate={endDate}
+                    handleStartDateChange={handleStartDateChange}
+                    handleEndDateChange={handleEndDateChange}
                     prevStep={prevStep}
                 />
         }
@@ -484,27 +495,23 @@ const PermitStepper: React.FC<SteperState> = () => {
                     update={(element: any) => updateForm(element)}
 
                     />
-                    // break;
                 case 1:
                     return <App2
                     values={formdata}
                     update={(element: any) => updateForm(element)}
 
                     />
-                    // break;
                 case 2:
                     return <App3
                     values={formdata}
                     update={(element: any) => updateForm(element)}
 
                     />
-                    // break;
                 case 3:
                     return <App4
                     values={formdata}
                     update={(element: any) => updateForm(element)}
                     />
-                    // break;
                 default:
                     break;
             }
@@ -541,7 +548,6 @@ const PermitStepper: React.FC<SteperState> = () => {
                     {switchSteps(step)}
                 </div>
             </Container>
-            <HelpDesk toggleHelpDesk={toggleHelpDesk} open={openHelp} />
         </div>
     )
 }

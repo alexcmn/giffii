@@ -62,7 +62,7 @@ const Login: React.FC<LoginProps> = () => {
         username: {
             element: 'input',
             value: '',
-            cPonfig: {
+            config: {
                 name: 'username_input',
                 type: 'text',
                 placeholder: 'Username'
@@ -144,10 +144,7 @@ const Login: React.FC<LoginProps> = () => {
                                         null
                                 }
                                 <div className="form-row bottom">
-                                    {/* <button onClick={(event) => submitForm(event)} type="submit" className="btn btn-primary">Sign In</button> */}
-                                    <Link to="/dashboard">
-                                        <button type="submit" className="btn btn-primary">Sign In</button>
-                                    </Link>
+                                    <button onClick={(event) => submitForm(event)} type="submit" className="btn btn-primary">Sign In</button>
                                 </div>
                                 <div className="stay-sign">
                                     <div className="wrapp">

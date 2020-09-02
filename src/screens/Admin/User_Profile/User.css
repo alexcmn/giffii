@@ -126,7 +126,7 @@
 }
 
 .dashboard .links .left{
-    width: 50%;
+    width: 40%;
 }
 
 .dashboard .links .left img{
@@ -134,6 +134,7 @@
     height: 7rem;
     border-radius: 36px;
     box-shadow: 0px 3px 6px #00000029;
+    object-fit: cover;
 }
 
 .dashboard .links .left h2{

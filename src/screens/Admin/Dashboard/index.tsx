@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import './Dashboard.css';
 import { ReactComponent as Search } from '../../../assets/images/icons/search.svg';
-import { ReactComponent as User } from '../../../assets/images/icons/user.svg';
+import { ReactComponent as User } from '../../../assets/images/icons/man.svg';
+import { ReactComponent as Pencil } from '../../../assets/images/icons/pencil.svg';
+import { ReactComponent as Euro } from '../../../assets/images/icons/euro.svg';
+import { ReactComponent as Folder } from '../../../assets/images/icons/folder.svg';
 import Sidebar from '../../../components/Header/Admin';
 import { Link } from 'react-router-dom';
 
@@ -47,7 +50,7 @@ const Dashboard: React.FC<State> = () => {
                     <Link to="/my_application" className="bx-link">
                         <div className="box">
                             <div className="wrapp">
-                                <User/>
+                                <Pencil/>
                                 <p>Apply for Permit</p>
                             </div>    
                         </div>
@@ -55,7 +58,7 @@ const Dashboard: React.FC<State> = () => {
                     <Link to="/payements" className="bx-link">
                         <div className="box">
                             <div className="wrapp">
-                                <User/>
+                                <Euro/>
                                 <p>Pending Payments</p>
                             </div>    
                         </div>
@@ -63,7 +66,7 @@ const Dashboard: React.FC<State> = () => {
                     <Link to="/my_application" className="bx-link">
                         <div className="box">
                             <div className="wrapp">
-                                <User/>
+                                <Folder/>
                                 <p>View Applications</p>
                             </div>    
                         </div>

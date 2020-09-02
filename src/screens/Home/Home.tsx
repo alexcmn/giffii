@@ -28,7 +28,7 @@ const Home: React.FC<Home> = () => {
           <Grid sm={12} md={12} className="home-box">
             <div className="wrapp">
               <HomeWriting />
-              <h2>Chosse Permit Type</h2>
+              <h2>Choose Permit Type</h2>
             </div>
           </Grid>
           <Grid sm={12} md={12} className="home-box">
