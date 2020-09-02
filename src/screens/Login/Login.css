@@ -76,6 +76,12 @@
     transition: 0.3s ease-in-out;
     color: #fff;
 }
+
+.login-wrapp .left .container .row .login-box form .form-row button a{
+    color: #fff;
+    text-decoration: none;
+}
+
 .login-wrapp .left .container .row .login-box form .form-row button:hover {
     background-color: #fff;
     color: #21b4bf;

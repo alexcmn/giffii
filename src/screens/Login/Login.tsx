@@ -144,7 +144,9 @@ const Login: React.FC<LoginProps> = () => {
                                         null
                                 }
                                 <div className="form-row bottom">
-                                    <button onClick={(event) => submitForm(event)} type="submit" className="btn btn-primary">Sign In</button>
+                                    <button onClick={(event) => submitForm(event)} type="submit" className="btn btn-primary">
+                                        <Link to="/dashboard">Sign In</Link>
+                                    </button>
                                 </div>
                                 <div className="stay-sign">
                                     <div className="wrapp">
