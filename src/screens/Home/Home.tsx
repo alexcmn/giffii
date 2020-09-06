@@ -22,6 +22,9 @@ const Home: React.FC<Home> = () => {
       }
     })
     .then(response=>console.log(response))
+
+    console.log(request)
+
   });
 
 
