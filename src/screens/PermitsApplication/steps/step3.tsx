@@ -84,7 +84,7 @@ const Step3: React.FC<LocalityProps> = ({ values,
                             <KeyboardDatePicker
                                 disableToolbar
                                 variant="inline"
-                                format="MM/dd/yyyy"
+                                format="dd/MM/yyyy"
                                 margin="normal"
                                 value={startDate}
                                 onChange={handleStartDateChange}
@@ -99,7 +99,7 @@ const Step3: React.FC<LocalityProps> = ({ values,
                             <KeyboardDatePicker
                                 disableToolbar
                                 variant="inline"
-                                format="MM/dd/yyyy"
+                                format="dd/MM/yyyy"
                                 margin="normal"
                                 value={endDate}
                                 minDate={startDate}

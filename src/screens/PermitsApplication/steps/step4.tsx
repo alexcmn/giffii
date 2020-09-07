@@ -56,7 +56,7 @@ const Step4: React.FC<LocalityProps> = ({ values, prevStep, checkWarden, startDa
                         <KeyboardDatePicker
                             disableToolbar
                             variant="inline"
-                            format="MM/dd/yyyy"
+                            format="dd/MM/yyyy"
                             margin="normal"
                             value={startDate}
                             onChange={handleStartDateChange}

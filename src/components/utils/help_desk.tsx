@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as Rubic } from '../../assets/images/icons/rubik.svg';
 import Clip from '../../assets/images/icons/clip.png';
 import Like from '../../assets/images/icons/like.png';
-import Cross from '../../assets/images/icons/close.png';
+import {ReactComponent as Chat} from '../../assets/images/icons/Chat.svg';
 
 interface HelpDeskProps {
     open: boolean,
@@ -15,7 +15,7 @@ const PermitCheckbox: React.SFC<HelpDeskProps> = ({ open, toggleHelpDesk }) => {
     return (
         <div className={`help-desk-btn ${open ? 'active' : ''}`}>
             <span onClick={toggleHelpDesk}>
-                <img src={Cross} alt="" />
+                <Chat/>
             </span>
             <div className="help">
                 <div className="top">
